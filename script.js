@@ -9,7 +9,12 @@ function addBola() {
 	let bola = document.createElement('div')
 	bola.setAttribute('class', 'bola')
 
-	let pLeft = nRand(500)
+	if ( window.innerWidth >= 500 ) {
+		var pLeft = nRand(500)
+	} else {
+		var pLeft = nRand(window.innerWidth - 25)
+	}
+	
 	let pTop = nRand(400)
 
 	bola.setAttribute('style', `left: ${pLeft}px; top: ${pTop}px;`)
